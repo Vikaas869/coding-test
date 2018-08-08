@@ -3,14 +3,17 @@ package com.monsanto.mbt;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * ShipmentTest
+ * @author vikas
+ *
+ */
 public class ShipmentTest {
     private Shipment shipment;
 
@@ -24,6 +27,9 @@ public class ShipmentTest {
         shipment = null;
     }
 
+    /**
+     * Test case for widgets sorted by color
+     */
     @Test
     public void testShipment_Sorted_By_Color() {
         List<Widget> widgets = shipment.getWidgetsSortedByColor();
@@ -34,6 +40,9 @@ public class ShipmentTest {
         assertTrue(widget1.getColor().compareTo(widget2.getColor()) <= 0);
     }
 
+    /**
+     * Test case for widgets sorted by date
+     */
     @Test
     public void testShipment_Sorted_By_Date() {
         List<Widget> widgets = shipment.getWidgetsSortedByDate();
